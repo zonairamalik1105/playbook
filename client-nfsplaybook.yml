@@ -1,0 +1,15 @@
+---
+- name: client-nfsplaybook
+  hosts: all
+  tasks:
+  - name: making direcotry
+    file:
+      path: /nfs2-share
+      state: directory
+  - name: make boot persistent
+    mount:
+      path: /nfs2-share
+      src: 10.0.0.102:/nfs-share
+      fstype: nfs
+      state: mounted
+

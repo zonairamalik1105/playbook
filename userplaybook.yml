@@ -1,0 +1,9 @@
+---
+- name: userplaybook
+  hosts: all
+  tasks: 
+  - name: adding user
+    user: 
+      name: john
+      state: present
+      password: $1$buZiZlz2$ymuA3ruam9.QhHecLfyO01
